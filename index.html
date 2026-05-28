@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>백링크 자동화 프로그램 - 서버 웜업 | 마포 1등 백링크</title>
+    <meta name="description" content="마포에서 운영하는 서버 웜업 전문. 백링크 자동화 프로그램으로 당신의 사이트를 폭발적으로 성장시킵니다. 티어3 PBN 노하우, 지금 바로 전화주세요.">
+    <meta name="keywords" content="백링크 자동화, 서버 웜업, 마포 백링크, PBN 백링크, 백링크 프로그램, 티어3 백링크, 자동 백링크 생성기">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-neon-void">
+    <link rel="canonical" href="https://sf-t3-1779642675702-467.pages.dev">
+
+    <!-- OG Meta -->
+    <meta property="og:title" content="백링크 자동화 프로그램 - 서버 웜업 | 마포 1등 백링크">
+    <meta property="og:description" content="마포에서 운영하는 서버 웜업 전문. 백링크 자동화 프로그램으로 당신의 사이트를 폭발적으로 성장시킵니다. 티어3 PBN 노하우, 지금 바로 전화주세요.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sf-t3-1779642675702-467.pages.dev">
+    <meta property="og:image" content="https://sf-t3-1779642675702-467.pages.dev/og-image.svg">
+    <meta property="og:locale" content="ko_KR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="백링크 자동화 프로그램 - 서버 웜업 | 마포 1등 백링크">
+    <meta name="twitter:description" content="마포에서 운영하는 서버 웜업 전문. 백링크 자동화 프로그램으로 당신의 사이트를 폭발적으로 성장시킵니다. 티어3 PBN 노하우, 지금 바로 전화주세요.">
+    <meta name="twitter:image" content="https://sf-t3-1779642675702-467.pages.dev/og-image.svg">
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "백링크 자동화 프로그램",
+        "operatingSystem": "All",
+        "applicationCategory": "BusinessApplication",
+        "description": "마포 서버 웜업 기반의 백링크 자동화 도구. 티어3 PBN 네트워크를 활용한 빠른 색인과 링크 구축.",
+        "url": "https://sf-t3-1779642675702-467.pages.dev",
+        "telephone": "010-6279-0862",
+        "areaServed": {
+            "@type": "City",
+            "name": "마포"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "KRW"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "42"
+        }
+    }
+    </script>
+
+    <style>
+        /* ===== RESET ===== */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+            text-size-adjust: 100%;
+        }
+
+        body {
+            background: #000;
+            color: #fff;
+            font-family: Impact, 'Arial Black', system-ui, sans-serif;
+            line-height: 1.2;
+            min-height: 100vh;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* ===== TYPOGRAPHY ===== */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 900;
+            letter-spacing: -0.03em;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-size: clamp(3rem, 10vw, 7rem);
+            line-height: 0.9;
+        }
+
+        h2 {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            line-height: 1;
+        }
+
+        h3 {
+            font-size: 2rem;
+        }
+
+        p, li, blockquote {
+            font-family: system-ui, sans-serif;
+            font-weight: 400;
+            line-height: 1.5;
+            letter-spacing: 0.01em;
+        }
+
+        a {
+            color: #ff3b00;
+            text-decoration: none;
+            border-bottom: 3px solid currentColor;
+            transition: background 0.15s, color 0.15s;
+        }
+
+        a:hover {
+            background: #ff3b00;
+            color: #000;
+        }
+
+        strong {
+            color: #ff3b00;
+            font-weight: 900;
+        }
+
+        /* ===== LAYOUT ===== */
+        .wrapper {
+            max-width: 100%;
+            padding: 0 72px;
+        }
+
+        @media (max-width: 768px) {
+            .wrapper {
+                padding: 0 24px;
+            }
+        }
+
+        header, section, footer {
+            padding: 72px 0;
+        }
+
+        section + section {
+            margin-top: 120px;
+        }
+
+        .grid-asymmetric {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: start;
+        }
+
+        @media (max-width: 768px) {
+            .grid-asymmetric {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+        }
+
+        .full-bleed {
+            margin-left: calc(-50vw + 50%);
+            margin-right: calc(-50vw + 50%);
+            width: 100vw;
+            padding-left: 72px;
+            padding-right: 72px;
+        }
+
+        @media (max-width: 768px) {
+            .full-bleed {
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+        }
+
+        .negative-margin-left {
+            margin-left: -72px;
+        }
+
+        @media (max-width: 768px) {
+            .negative-margin-left {
+                margin-left: -24px;
+            }
+        }
+
+        /* ===== BORDERS & TEXTURES ===== */
+        .brutal-border {
+            border: 4px solid #fff;
+            padding: 24px;
+            background: transparent;
+            transition: background 0.2s;
+        }
+
+        .brutal-border:hover {
+            background: rgba(255,59,0,0.15);
+        }
+
+        .brutal-border-accent {
+            border: 4px solid #ff3b00;
+            padding: 24px;
+            background: #000;
+        }
+
+        .skewed {
+            transform: skew(-4deg);
+        }
+
+        .skewed > * {
+            transform: skew(4deg);
+        }
+
+        .rotated-neg {
+            transform: rotate(-2deg);
+        }
+
+        .rotated-pos {
+            transform: rotate(2deg);
+        }
+
+        /* ===== HEADER & NAV ===== */
+        header {
+            position: relative;
+            z-index: 100;
+            padding: 24px 72px;
+            border-bottom: 4px solid #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #000;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 16px 24px;
+            }
+        }
+
+        .logo {
+            font-size: 2rem;
+            color: #ff3b00;
+            letter-spacing: -0.05em;
+            border: none;
+            background: none;
+        }
+
+        .logo:hover {
+            background: none;
+            color: #fff;
+        }
+
+        nav.desktop-nav {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+
+        nav.desktop-nav a {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            border-bottom: 3px solid transparent;
+            padding-bottom: 4px;
+        }
+
+        nav.desktop-nav a:hover {
+            border-bottom-color: #ff3b00;
+        }
+
+        .cta-phone {
+            display: inline-block;
+            background: #ff3b00;
+            color: #000;
+            padding: 8px 24px;
+            font-size: 1.3rem;
+            font-weight: 900;
+            border: none;
+            border-bottom: none;
+            transform: rotate(1deg);
+            transition: transform 0.15s;
+        }
+
+        .cta-phone:hover {
+            transform: rotate(-1deg) scale(1.05);
+            background: #fff;
+            color: #000;
+        }
+
+        /* 햄버거 버튼 */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 32px;
+            height: 4px;
+            background: #fff;
+            border: 2px solid #fff;
+        }
+
+        .mobile-nav {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: #000;
+            border-bottom: 4px solid #ff3b00;
+            padding: 24px 72px;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .mobile-nav.open {
+            display: flex;
+        }
+
+        .mobile-nav a {
+            font-size: 1.5rem;
+            padding: 8px 0;
+            border-bottom: 3px solid transparent;
+        }
+
+        .mobile-nav a:hover {
+            border-bottom-color: #ff3b00;
+        }
+
+        @media (max-width: 768px) {
+            nav.desktop-nav {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .mobile-nav {
+                padding: 24px;
+            }
+        }
+
+        /* ===== HERO ===== */
+        #hero {
+            padding: 120px 72px;
+            display: flex;
+            flex-direction: column;
+            gap: 48px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @media (max-width: 768px) {
+            #hero {
+                padding: 72px 24px;
+            }
+        }
+
+        #hero::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255,59,0,0.3) 0%, transparent 70%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .hero-block {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-tagline {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            color: #ff3b00;
+            margin-bottom: 16px;
+            display: inline-block;
+            border: 4px solid #ff3b00;
+            padding: 4px 16px;
+        }
+
+        .hero-title {
+            font-size: clamp(3.5rem, 12vw, 8rem);
+            line-height: 0.85;
+            margin-bottom: 24px;
+            max-width: 12ch;
+        }
+
+        .hero-title span {
+            background: #ff3b00;
+            color: #000;
+            padding: 0 8px;
+            display: inline;
+        }
+
+        .hero-sub {
+            font-size: 1.4rem;
+            max-width: 30ch;
+            border-left: 6px solid #ff3b00;
+            padding-left: 24px;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-top: 32px;
+        }
+
+        .hero-cta-group a {
+            font-size: 1.6rem;
+            padding: 12px 36px;
+            border: 4px solid #fff;
+            background: transparent;
+            color: #fff;
+            transition: all 0.15s;
+        }
+
+        .hero-cta-group a:hover {
+            background: #ff3b00;
+            color: #000;
+            border-color: #ff3b00;
+        }
+
+        .hero-cta-group .cta-primary {
+            background: #ff3b00;
+            color: #000;
+            border-color: #ff3b00;
+        }
+
+        .hero-cta-group .cta-primary:hover {
+            background: #fff;
+            border-color: #fff;
+        }
+
+        /* ===== SECTIONS ===== */
+        .section-label {
+            display: inline-block;
+            border: 4px solid #ff3b00;
+            padding: 4px 16px;
+            font-size: 0.9rem;
+            letter-spacing: 0.2em;
+            margin-bottom: 24px;
+            color: #ff3b00;
+        }
+
+        .section-heading {
+            margin-bottom: 48px;
+            max-width: 12ch;
+        }
+
+        /* ===== UGC REVIEWS ===== */
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 48px;
+        }
+
+        @media (max-width: 768px) {
+            .reviews-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+        }
+
+        .review-card {
+            border: 4px solid #fff;
+            padding: 32px 24px;
+            position: relative;
+            transition: transform 0.2s;
+            background: #000;
+        }
+
+        .review-card:hover {
+            transform: rotate(-1deg) scale(1.02);
+            border-color: #ff3b00;
+        }
+
+        .review-card::before {
+            content: '"';
+            position: absolute;
+            top: -20px;
+            left: 12px;
+            font-size: 6rem;
+            color: #ff3b00;
+            opacity: 0.3;
+            line-height: 1;
+            pointer-events: none;
+        }
+
+        .review-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        .review-nick {
+            font-weight: 900;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        .review-date {
+            font-family: system-ui, sans-serif;
+        }
+
+        .review-stars {
+            display: flex;
+            gap: 4px;
+            margin-bottom: 12px;
+        }
+
+        .review-stars span {
+            font-size: 1.4rem;
+            color: #ff3b00;
+        }
+
+        .review-text {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        /* ===== FEATURES ===== */
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+        }
+
+        @media (max-width: 768px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .feature-item {
+            border: 4px solid #fff;
+            padding: 32px;
+            position: relative;
+            background: #000;
+            transition: border-color 0.2s;
+        }
+
+        .feature-item:hover {
+            border-color: #ff3b00;
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 16px;
+            color: #ff3b00;
+        }
+
+        .feature-title {
+            font-size: 1.8rem;
+            margin-bottom: 12px;
+        }
+
+        .feature-desc {
+            font-family: system-ui, sans-serif;
+        }
+
+        /* ===== CTA ===== */
+        .cta-section {
+            background: #000;
+            border: 4px solid #ff3b00;
+            padding: 72px;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            margin-bottom: 24px;
+        }
+
+        .cta-section .cta-phone-big {
+            display: inline-block;
+            background: #ff3b00;
+            color: #000;
+            font-size: 2.5rem;
+            padding: 16px 64px;
+            border: none;
+            font-weight: 900;
+            margin-top: 24px;
+            transition: all 0.2s;
+        }
+
+        .cta-section .cta-phone-big:hover {
+            background: #fff;
+            transform: scale(1.05) rotate(-2deg);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            border-top: 4px solid #fff;
+            padding: 48px 72px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        @media (max-width: 768px) {
+            footer {
+                padding: 24px;
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        footer .copy {
+            font-family: system-ui, sans-serif;
+            color: #888;
+        }
+
+        footer .footer-links {
+            display: flex;
+            gap: 32px;
+        }
+
+        footer .footer-links a {
+            border-bottom: 2px solid transparent;
+        }
+
+        footer .footer-links a:hover {
+            border-bottom-color: #ff3b00;
+        }
+
+        /* ===== MISC ===== */
+        .overline-dec {
+            display: inline-block;
+            width: 80px;
+            height: 4px;
+            background: #ff3b00;
+            margin-bottom: 16px;
+        }
+
+        .highlight {
+            background: #ff3b00;
+            color: #000;
+            padding: 0 4px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .mt-48 {
+            margin-top: 48px;
+        }
+
+        /* ===== SKEWED BACKGROUND DECORATION ===== */
+        .bg-splat {
+            position: relative;
+        }
+
+        .bg-splat::after {
+            content: '⚡🔥⚡';
+            position: absolute;
+            bottom: -40px;
+            right: -20px;
+            font-size: 8rem;
+            opacity: 0.1;
+            transform: skew(-10deg) rotate(15deg);
+            pointer-events: none;
+        }
+
+        /* ===== 반응형 조정 ===== */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.8rem;
+            }
+
+            h2 {
+                font-size: 2.2rem;
+            }
+
+            .hero-title {
+                max-width: 100%;
+            }
+
+            .hero-cta-group a {
+                font-size: 1.2rem;
+                padding: 8px 24px;
+            }
+
+            .cta-section {
+                padding: 32px 24px;
+            }
+
+            .cta-section .cta-phone-big {
+                font-size: 1.6rem;
+                padding: 12px 32px;
+            }
+
+            .brutal-border, .brutal-border-accent {
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="/" class="logo">🔥 백링크 자동화</a>
+
+    <nav class="desktop-nav">
+        <a href="#hero">홈</a>
+        <a href="#reviews">리뷰</a>
+        <a href="#features">서비스</a>
+        <a href="#contact" class="cta-phone" href="tel:01062790862">📞 010-6279-0862</a>
+    </nav>
+
+    <button class="hamburger" id="hamburger-btn" aria-label="메뉴 열기">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <div class="mobile-nav" id="mobile-nav">
+        <a href="#hero">홈</a>
+        <a href="#reviews">리뷰</a>
+        <a href="#features">서비스</a>
+        <a href="tel:01062790862" class="cta-phone">📞 010-6279-0862</a>
+    </div>
+</header>
+
+<main>
+    <!-- ===== HERO ===== -->
+    <section id="hero" class="full-bleed">
+        <div class="hero-block skewed">
+            <span class="hero-tagline">⚡ 서버 웜업 ⚡</span>
+            <h1 class="hero-title">
+                백링크 <span>자동화</span><br>
+                마포 1위
+            </h1>
+            <div class="hero-sub">
+                <p>티어3 PBN 네트워크, <strong>수동보다 10배 빠른</strong> 백링크 생성. 당신의 사이트를 즉시 웜업하라.</p>
+            </div>
+            <div class="hero-cta-group">
+                <a href="tel:01062790862" class="cta-primary">📞 지금 전화</a>
+                <a href="#reviews">리뷰 확인</a>
+            </div>
+        </div>
+        <div class="hero-block negative-margin-left rotated-pos" style="max-width: 40%; align-self: end;">
+            <div class="brutal-border-accent" style="border-width:6px;">
+                <p style="font-size:2rem; color:#ff3b00; font-weight:900;">🔥 42+</p>
+                <p style="font-family:system-ui;">실제 구축 사례 · 평점 4.8 ★</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== UGC REVIEWS ===== -->
+    <section id="reviews" class="wrapper bg-splat">
+        <div class="section-label">💬 UGC REAL TALK</div>
+        <h2 class="section-heading">진짜 후기만<br><span class="highlight">박음질</span></h2>
+
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="review-meta">
+                    <span class="review-nick">백링크킹</span>
+                    <span class="review-date">2025-03-12</span>
+                </div>
+                <div class="review-stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+                <p class="review-text">"서버 웜업 진짜 빠르다. 프로그램 돌리자마자 구글에 박히기 시작함. 마포에서 이만한 데 없음."</p>
+            </div>
+
+            <div class="review-card">
+                <div class="review-meta">
+                    <span class="review-nick">SEO초보탈출</span>
+                    <
+</body>
+</html>

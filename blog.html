@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>블로그 - 서버 웜업이 답이다 | 마포 백링크</title>
+    <meta name="description" content="백링크 자동화 왜 해야 하는가? 서버 웜업 노하우, 마포에서 직접 운영하는 PBN으로 당신의 사이트를 폭발적으로 성장시키는 법.">
+    <meta name="keywords" content="백링크 자동화 프로그램, 서버 웜업, PBN 백링크, 마포 백링크, 백링크 전략, 티어3 PBN">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-neon-void">
+    <link rel="canonical" href="https://sf-t3-1779642675702-467.pages.dev/blog">
+    <!-- OG Meta -->
+    <meta property="og:title" content="백링크 자동화가 답인 이유 - 서버 웜업 전문 블로그">
+    <meta property="og:description" content="전통적인 SEO에 도전한다. PBN과 서버 웜업의 조합, 진짜 성장을 원한다면 지금 당장 읽어라.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://sf-t3-1779642675702-467.pages.dev/blog">
+    <meta property="og:site_name" content="마포 백링크">
+    <style>
+        /* ===== RESET ===== */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            -webkit-text-size-adjust: 100%;
+        }
+        body {
+            font-family: 'Inter', 'Noto Sans KR', system-ui, -apple-system, sans-serif;
+            background: #0b0b0e;
+            color: #e0e0e0;
+            line-height: 1.6;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        /* ===== TYPOGRAPHY ===== */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 800;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            text-transform: uppercase;
+            color: #f5f5f5;
+        }
+        h1 {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            color: #b3ff00;
+            text-shadow: 0 0 20px rgba(179, 255, 0, 0.3);
+        }
+        h2 {
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            border-left: 6px solid #ff00e6;
+            padding-left: 1rem;
+            margin: 2rem 0 1.5rem;
+        }
+        h3 {
+            font-size: clamp(1.3rem, 4vw, 2rem);
+            color: #ffb300;
+            margin: 2rem 0 1rem;
+        }
+        p, li, blockquote {
+            font-size: 1.1rem;
+            max-width: 72ch;
+            margin-bottom: 1.2rem;
+            color: #c8c8c8;
+        }
+        a {
+            color: #b3ff00;
+            text-decoration: underline wavy #ff00e6 2px;
+            text-underline-offset: 4px;
+            transition: color 0.2s;
+        }
+        a:hover {
+            color: #ff00e6;
+            text-decoration-color: #b3ff00;
+        }
+        strong {
+            color: #fff;
+            background: linear-gradient(135deg, #b3ff00 0%, #ff00e6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 900;
+        }
+        /* ===== LAYOUT ===== */
+        .wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        @media (max-width: 768px) {
+            .wrapper {
+                padding: 0 1rem;
+            }
+            h2 {
+                border-left-width: 4px;
+                padding-left: 0.75rem;
+            }
+        }
+        /* ===== NAV ===== */
+        nav {
+            background: #111114;
+            border-bottom: 4px solid #b3ff00;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        .logo a {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: #b3ff00;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: -0.03em;
+        }
+        .logo a:hover {
+            color: #ff00e6;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+        .nav-links li a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding-bottom: 4px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s;
+        }
+        .nav-links li a:hover,
+        .nav-links li a.active {
+            color: #b3ff00;
+            border-bottom-color: #ff00e6;
+        }
+        .nav-links li a.active {
+            color: #ff00e6;
+            border-bottom-color: #b3ff00;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 8px;
+        }
+        .hamburger span {
+            display: block;
+            width: 30px;
+            height: 4px;
+            background: #b3ff00;
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+        .tel-link {
+            display: inline-block;
+            background: #ff00e6;
+            color: #0b0b0e !important;
+            padding: 0.5rem 1.2rem;
+            font-weight: 900;
+            text-decoration: none;
+            border: 2px solid #b3ff00;
+            transition: 0.2s;
+        }
+        .tel-link:hover {
+            background: #b3ff00;
+            border-color: #ff00e6;
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #111114;
+                padding: 1.5rem 2rem;
+                gap: 1.5rem;
+                border-bottom: 4px solid #ff00e6;
+            }
+            .nav-links.open {
+                display: flex;
+            }
+            .hamburger {
+                display: flex;
+            }
+            .tel-link {
+                margin-top: 0.5rem;
+                text-align: center;
+            }
+        }
+        /* ===== BLOG SPECIFIC ===== */
+        .blog-hero {
+            padding: 4rem 0 2rem;
+            background: radial-gradient(circle at 20% 30%, #1a1a2e, #0b0b0e 80%);
+            border-bottom: 4px dashed #ff00e6;
+        }
+        .blog-hero .wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .blog-meta {
+            display: flex;
+            gap: 1.5rem;
+            font-size: 0.9rem;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            border-left: 3px solid #b3ff00;
+            padding-left: 1rem;
+        }
+        .blog-meta span {
+            color: #b3ff00;
+        }
+        .blog-content {
+            padding: 3rem 0 5rem;
+        }
+        .blog-content .wrapper {
+            max-width: 850px;
+        }
+        .blog-content p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+        }
+        .blog-content blockquote {
+            border-left: 6px solid #ff00e6;
+            background: #15151c;
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            font-style: italic;
+            color: #f0f0f0;
+            font-weight: 500;
+        }
+        .blog-content blockquote strong {
+            -webkit-text-fill-color: initial;
+            color: #b3ff00;
+        }
+        .blog-content .highlight-box {
+            background: #15151c;
+            border: 3px solid #b3ff00;
+            padding: 2rem;
+            margin: 2.5rem 0;
+            position: relative;
+        }
+        .blog-content .highlight-box::before {
+            content: "⚡";
+            position: absolute;
+            top: -1.2rem;
+            left: 1rem;
+            background: #0b0b0e;
+            padding: 0 0.5rem;
+            font-size: 2rem;
+        }
+        .blog-content ul {
+            list-style: none;
+            padding-left: 1.5rem;
+        }
+        .blog-content ul li::before {
+            content: "▸";
+            color: #ff00e6;
+            font-weight: bold;
+            display: inline-block;
+            width: 1.5rem;
+            margin-left: -1.5rem;
+        }
+        .blog-content .cta-end {
+            margin-top: 3rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, #1a1a2e, #0b0b0e);
+            border: 2px solid #ff00e6;
+            text-align: center;
+        }
+        .blog-content .cta-end a {
+            font-size: 1.3rem;
+            font-weight: 900;
+            text-decoration: none;
+            background: #b3ff00;
+            color: #0b0b0e !important;
+            padding: 1rem 2.5rem;
+            display: inline-block;
+            border: 3px solid #ff00e6;
+            transition: 0.2s;
+        }
+        .blog-content .cta-end a:hover {
+            background: #ff00e6;
+            border-color: #b3ff00;
+        }
+        /* ===== FOOTER ===== */
+        footer {
+            background: #111114;
+            border-top: 4px solid #ff00e6;
+            padding: 2rem 0;
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        footer a {
+            color: #b3ff00;
+            text-decoration: none;
+        }
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .blog-meta {
+                flex-direction: column;
+                gap: 0.3rem;
+            }
+            .blog-content blockquote {
+                padding: 1rem 1.2rem;
+            }
+            .blog-content .highlight-box {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="/">마포 백링크</a>
+            </div>
+            <button class="hamburger" aria-label="메뉴 열기" onclick="this.classList.toggle('active'); document.querySelector('.nav-links').classList.toggle('open')">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="/">홈</a></li>
+                <li><a href="/service">서비스</a></li>
+                <li><a href="/blog" class="active">블로그</a></li>
+                <li><a href="/contact">연락처</a></li>
+                <li><a href="tel:010-1234-5678" class="tel-link">☎ 전화상담</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- 블로그 히어로 -->
+        <section class="blog-hero">
+            <div class="wrapper">
+                <div class="blog-meta">
+                    <span>카테고리: PBN 전략</span>
+                    <span>읽는 시간: 4분</span>
+                    <span>작성: 2025.03.24</span>
+                </div>
+                <h1>서버 웜업,<br>왜 백링크 자동화가 답인가?</h1>
+                <p style="font-size: 1.3rem; color: #ffb300; font-weight: 600; margin-top: 0.5rem;">엄마가 차려주는 밥상 같은 PBN, 안 먹을 이유가 없다.</p>
+            </div>
+</body>
+</html>
